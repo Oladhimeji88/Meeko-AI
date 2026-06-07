@@ -64,8 +64,10 @@ class VoiceService {
       onResult: (r) {
         if (r.finalResult) onResult(r.recognizedWords);
       },
-      listenFor: const Duration(seconds: 30),
-      pauseFor: const Duration(seconds: 3),
+      listenOptions: SpeechListenOptions(
+        listenFor: const Duration(seconds: 30),
+        pauseFor: const Duration(seconds: 3),
+      ),
     );
   }
 

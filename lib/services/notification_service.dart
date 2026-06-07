@@ -97,6 +97,8 @@ class NotificationService {
       tz.TZDateTime.from(when, tz.local),
       NotificationDetails(android: _alarmAndroid, iOS: const DarwinNotificationDetails()),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
       payload: 'alarm:$id',
     );
   }
@@ -117,6 +119,8 @@ class NotificationService {
       _nextWeekdayTime(weekday, hour, minute),
       NotificationDetails(android: _alarmAndroid, iOS: const DarwinNotificationDetails()),
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
       payload: 'alarm:$id',
     );

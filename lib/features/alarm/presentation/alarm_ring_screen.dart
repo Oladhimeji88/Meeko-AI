@@ -85,18 +85,18 @@ class _AlarmRingScreenState extends ConsumerState<AlarmRingScreen> {
                   _RingButton(
                     label: 'SNOOZE',
                     color: s.accent,
-                    onTap: () async {
-                      await _stop();
-                      if (mounted) Navigator.of(context).pop('snooze');
+                    onTap: () {
+                      final nav = Navigator.of(context);
+                      _stop().then((_) => nav.pop('snooze'));
                     },
                   ),
                   const SizedBox(width: 24),
                   _RingButton(
                     label: 'DISMISS',
                     color: s.body,
-                    onTap: () async {
-                      await _stop();
-                      if (mounted) Navigator.of(context).pop('dismiss');
+                    onTap: () {
+                      final nav = Navigator.of(context);
+                      _stop().then((_) => nav.pop('dismiss'));
                     },
                   ),
                 ],
