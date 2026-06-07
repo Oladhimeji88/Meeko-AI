@@ -7,7 +7,23 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Pixelbuddy Clock</string>
+	<string>PixelBuddy Clock</string>
+
+	<!-- Permission usage descriptions (required by App Store review) -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>PixelBuddy uses your location to show local weather and react to it.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>PixelBuddy uses the microphone so you can talk to the AI companion.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>PixelBuddy uses speech recognition to understand your voice commands.</string>
+
+	<!-- Background modes: keep alarms/audio alive -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
