@@ -1,4 +1,5 @@
 /// Shared enums used across PixelBuddy Clock.
+library;
 
 /// The emotional/animation state of the pixel character.
 enum BuddyMood {
