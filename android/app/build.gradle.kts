@@ -8,10 +8,7 @@ plugins {
 android {
     namespace = "com.tech4mation.pixelbuddy_clock"
     compileSdk = flutter.compileSdkVersion
-    // Pinned to the locally installed, intact NDK. The Flutter-default NDK
-    // (flutter.ndkVersion) was a corrupt/partial download missing source.properties.
-    // This app ships no native C++, so any installed NDK satisfies the toolchain.
-    ndkVersion = "27.1.12297006"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         // Required by flutter_local_notifications (uses java.time APIs).
